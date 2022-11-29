@@ -5,7 +5,7 @@ const forecast = require('./utils/forecast')
 
 const express = require('express')
 const app = express()
-const port = process.env.PORT | 3000
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -88,5 +88,5 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('listening for incoming requests at port' + port)
+    console.log('listening for incoming requests at port ' + port)
 })
